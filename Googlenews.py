@@ -9,6 +9,9 @@ from collections import Counter
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud, ImageColorGenerator
 from scipy.ndimage import gaussian_gradient_magnitude
+import ssl
+
+ssl._create_default_https_context = ssl._create_unverified_context
 
 googlenews = GoogleNews()
 
@@ -37,6 +40,7 @@ df = pd.DataFrame(
     })
 
 url = df['連結'][0]
+
 print(url)
 # 取其中一篇文章做分析測試
 
@@ -56,7 +60,7 @@ for p in articleContent:
 
 articleAll = '\n'.join(article)
 
-jieba.load_userdict('/Users/chris/OneDrive/文件/Python-WordCloud/dict.txt.big.txt')
+jieba.load_userdict('/Users/zhonghonghao/googlenews-wordCloud/dict.txt.big.txt')
 
 d = articleAll.replace('!', '').replace('／', "").replace('《', '').replace('》', '').replace('，', '').replace('。', '').replace(
     '「', '').replace('」', '').replace('（', '').replace('）', '').replace('！', '').replace('？', '').replace('、',
@@ -68,7 +72,7 @@ jieba.setLogLevel(10)
 
 Sentence = jieba.cut_for_search(d)
 
-with open('/Users/chris/OneDrive/文件/Python-WordCloud/stopword.txt', 'r', encoding="utf-8") as f:
+with open('/Users/zhonghonghao/googlenews-wordCloud/stopword.txt', 'r', encoding="utf-8") as f:
     stopwords = f.read().split('\n')
 
 terms = {}
@@ -87,8 +91,9 @@ print(Counter(terms))
 artDf = pd.DataFrame.from_dict(terms, orient='index', columns=['詞頻'])
 artDf.sort_values(by=['詞頻'], ascending=False)
 
+
 img = "color-0"
-img_path = "/Users/chris/OneDrive/文件/Python-WordCloud/%s.png" % img
+img_path = "/Users/zhonghonghao/googlenews-wordCloud/%s.png" % img
 
 mask_color = np.array(Image.open(img_path))
 mask_color = mask_color[::3, ::3]
@@ -98,15 +103,16 @@ mask_image[mask_image.sum(axis=2) == 0] = 255
 edges = np.mean([gaussian_gradient_magnitude(mask_color[:, :, i] / 255., 2) for i in range(3)], axis=0)
 mask_image[edges > .08] = 255
 
-wc = WordCloud(font_path="/Users/chris/OneDrive/文件/Python-WordCloud/font/ChunLianXingShuZiTi-1.ttf",
+wc = WordCloud(font_path="/Users/zhonghonghao/Downloads/ThePeakFontBeta_V0_101/ThePeakFontBeta_V0_101.ttf",
                mask=mask_color,
                max_font_size=35,
                max_words=4000,
                stopwords=stopwords,
                margin=0,
-               relative_scaling=0)
+               relative_scaling=0,
+               )
 
-wc.generate_from_frequencies(terms)
+wc.generate(articleAll)
 image_colors = ImageColorGenerator(mask_color)
 wc.recolor(color_func=image_colors)
 
@@ -116,6 +122,3 @@ plt.imshow(wc, interpolation="bilinear")
 plt.axis("off")
 plt.figure(figsize=(25, 25))
 plt.show()
-
-# plt.savefig("Wordcloud.png")
-wc.to_file("img/x.png")
