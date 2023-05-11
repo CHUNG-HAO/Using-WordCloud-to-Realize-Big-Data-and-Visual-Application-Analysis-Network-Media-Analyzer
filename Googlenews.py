@@ -42,7 +42,6 @@ df = pd.DataFrame(
 url = df['連結'][0]
 
 print(url)
-# 取其中一篇文章做分析測試
 
 user_agent = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36'}
@@ -66,7 +65,7 @@ d = articleAll.replace('!', '').replace('／', "").replace('《', '').replace('�
     '「', '').replace('」', '').replace('（', '').replace('）', '').replace('！', '').replace('？', '').replace('、',
                                                                                                           '').replace(
     '▲', '').replace('…', '').replace('：', '')
-# print(d)
+
 
 jieba.setLogLevel(10)
 
@@ -115,8 +114,6 @@ wc = WordCloud(font_path="/Users/zhonghonghao/Downloads/ThePeakFontBeta_V0_101/T
 wc.generate(articleAll)
 image_colors = ImageColorGenerator(mask_color)
 wc.recolor(color_func=image_colors)
-
-# 視覺化
 
 plt.imshow(wc, interpolation="bilinear")
 plt.axis("off")
