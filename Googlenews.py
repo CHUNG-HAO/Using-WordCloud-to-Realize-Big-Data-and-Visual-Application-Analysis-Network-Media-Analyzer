@@ -102,7 +102,7 @@ mask_image[mask_image.sum(axis=2) == 0] = 255
 edges = np.mean([gaussian_gradient_magnitude(mask_color[:, :, i] / 255., 2) for i in range(3)], axis=0)
 mask_image[edges > .08] = 255
 
-wc = WordCloud(font_path="/Users/zhonghonghao/Downloads/ThePeakFontBeta_V0_101/ThePeakFontBeta_V0_101.ttf",
+wc = WordCloud(font_path="/Users/zhonghonghao/googlenews-wordCloud/Kalam-Bold.ttf",
                mask=mask_color,
                max_font_size=35,
                max_words=4000,
