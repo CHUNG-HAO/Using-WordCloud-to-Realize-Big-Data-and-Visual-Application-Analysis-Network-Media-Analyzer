@@ -102,7 +102,7 @@ def generate_wordcloud():
     
     edges = np.mean([gaussian_gradient_magnitude(mask_color[:, :, i] / 255., 2) for i in range(3)], axis=0)
     mask_image[edges > .08] = 255
-    #文字雲輸出大小跟空間以及字體
+    #文字雲輸出大小跟空間以及字體n
     wc = WordCloud(font_path="/Users/zhonghonghao/googlenews-wordCloud/Kalam-Bold.ttf",
                    mask=mask_color,
                    max_font_size=35,
@@ -121,7 +121,7 @@ def generate_wordcloud():
     plt.savefig(output_path)
     plt.close()
     
-    # 生成圖片
+    # 生成圖片f
     image = Image.open(output_path)
     image = image.resize((400, 400), Image.ANTIALIAS)
     image_tk = ImageTk.PhotoImage(image)
