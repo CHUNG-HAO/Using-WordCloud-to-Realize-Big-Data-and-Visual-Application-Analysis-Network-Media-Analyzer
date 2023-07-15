@@ -121,7 +121,7 @@ def generate_wordcloud():
     plt.savefig(output_path)
     plt.close()
     
-    # 生成圖片
+    # 生成圖片f
     image = Image.open(output_path)
     image = image.resize((400, 400), Image.ANTIALIAS)
     image_tk = ImageTk.PhotoImage(image)
