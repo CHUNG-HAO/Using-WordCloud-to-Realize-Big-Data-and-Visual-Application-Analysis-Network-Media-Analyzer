@@ -1,4 +1,4 @@
-# googlenews-
+# Using-WordCloud-to-Realize-Big-Data-and-Visual-Application-Analysis-Network-Media-Analyzer
 
 # 相關介紹
 [以WordCloud實現大數據與視覺化應用分析-網路媒體解析器.pdf](https://github.com/chris911024/googlenews-wordCloud/blob/main/以WordCloud實現大數據與視覺化應用分析-網路媒體解析器.pdf)
