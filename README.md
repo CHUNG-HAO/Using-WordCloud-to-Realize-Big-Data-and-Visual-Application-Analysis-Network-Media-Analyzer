@@ -2,7 +2,7 @@
 
 # 相關介紹
 [以WordCloud實現大數據與視覺化應用分析-網路媒體解析器.pdf](https://github.com/chris911024/googlenews-wordCloud/blob/main/以WordCloud實現大數據與視覺化應用分析-網路媒體解析器.pdf)
-# 最終成品
+# Demo
 <img width="121" alt="image" src="https://user-images.githubusercontent.com/67829896/228206205-f6b95cbf-38d7-460b-af41-298b186e243d.png">
 #1 
 <img width="689" alt="test" src="https://github.com/chris911024/googlenews-wordCloud/assets/67829896/ccb17ae4-ec49-4c02-981c-d2037b5d13d9">
