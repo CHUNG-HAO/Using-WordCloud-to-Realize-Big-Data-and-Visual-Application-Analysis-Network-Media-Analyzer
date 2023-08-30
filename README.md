@@ -1,5 +1,12 @@
 # Using-WordCloud-to-Realize-Big-Data-and-Visual-Application-Analysis-Network-Media-Analyzer
-
+激活虛擬環境
+```
+venv\Script\active
+```
+運行
+```
+python3 test.py
+```
 # 相關介紹
 [以WordCloud實現大數據與視覺化應用分析-網路媒體解析器.pdf](https://github.com/chris911024/googlenews-wordCloud/blob/main/以WordCloud實現大數據與視覺化應用分析-網路媒體解析器.pdf)
 # Demo
