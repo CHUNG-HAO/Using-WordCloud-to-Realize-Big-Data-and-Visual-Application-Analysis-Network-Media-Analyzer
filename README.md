@@ -1,5 +1,5 @@
 # Using-WordCloud-to-Realize-Big-Data-and-Visual-Application-Analysis-Network-Media-Analyzer
-激活虛擬環境
+開啟虛擬環境
 ```
 venv\Script\active
 ```
