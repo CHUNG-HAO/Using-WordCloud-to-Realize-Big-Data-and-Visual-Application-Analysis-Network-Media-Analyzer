@@ -34,7 +34,7 @@ python3 test.py
 
 <img width="443" alt="截圖 2023-05-12 上午12 35 48" src="https://github.com/chris911024/googlenews-wordCloud/assets/67829896/cdcde424-fde1-448d-814e-e60e59e46b18">
 
-歡迎pr
+歡迎ＰＲ給我
 
 
 
