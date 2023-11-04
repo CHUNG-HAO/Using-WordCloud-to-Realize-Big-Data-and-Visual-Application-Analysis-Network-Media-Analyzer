@@ -4,11 +4,12 @@
 [![GitHub Stars](https://img.shields.io/github/stars/chris911024/Using-WordCloud-to-Realize-Big-Data-and-Visual-Application-Analysis-Network-Media-Analyzer?style=flat&label=Stars)](https://github.com/chris911024/Using-WordCloud-to-Realize-Big-Data-and-Visual-Application-Analysis-Network-Media-Analyzer/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/chris911024/Using-WordCloud-to-Realize-Big-Data-and-Visual-Application-Analysis-Network-Media-Analyzer?style=flat&label=Forks)](https://github.com/chris911024/Using-WordCloud-to-Realize-Big-Data-and-Visual-Application-Analysis-Network-Media-Analyzer/network/members)
 [![GitHub Issues](https://img.shields.io/github/issues/chris911024/Using-WordCloud-to-Realize-Big-Data-and-Visual-Application-Analysis-Network-Media-Analyzer?style=flat&label=Issues)](https://github.com/chris911024/Using-WordCloud-to-Realize-Big-Data-and-Visual-Application-Analysis-Network-Media-Analyzer/issues)
-開啟虛擬環境
+
+> 開啟虛擬環境
 ```
 venv\Script\active
 ```
-運行
+> 運行
 ```
 python3 test.py
 ```
